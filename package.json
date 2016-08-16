@@ -1,0 +1,45 @@
+{
+  "name": "generator-web-starter-drupal8",
+  "version": "0.1.0",
+  "description": "A Drupal 8 yeoman sub-generator for web-starter",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/forumone/generator-web-starter-drupal8",
+  "bugs": "https://github.com/forumone/generator-web-starter/issues",
+  "author": {
+    "name": "Forum One",
+    "email": "support@forumone.com",
+    "url": "https://github.com/forumone"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/forumone/generator-web-starter-drupal8.git"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "drupal-modules": "~0.1.1",
+    "glob": "^7.0.3",
+    "lodash": "^4.6",
+    "update-notifier": "^0.2.2",
+    "yeoman-generator": "~0.23",
+    "yeoman-generator-bluebird": "^0.1.0",
+    "yosay": "~1.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "GPL"
+    }
+  ],
+  "files": [
+    "web-starter"
+  ],
+  "webStarter": {
+    "category": "Platform",
+    "name": "Drupal 8"
+  }
+}
