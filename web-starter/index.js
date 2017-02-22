@@ -9,14 +9,14 @@ var generators = require('yeoman-generator'),
 
 module.exports = generators.Base.extend({
   initializing : {
-  //   async : function() {
-  //     ygp(this);
-  //     this.options.addDevDependency(pkg.name, '~' + pkg.version);
-  //   },
-  //   platform : function() {
-  //     // Set the platform
-  //     this.options.parent.answers.platform = 'drupal8';
-  //   }
+    async : function() {
+      ygp(this);
+      this.options.addDevDependency(pkg.name, '~' + pkg.version);
+    },
+    platform : function() {
+      // Set the platform
+      this.options.parent.answers.platform = 'drupal8';
+    }
   },
   prompting : function() {
     var that = this;
@@ -43,25 +43,25 @@ module.exports = generators.Base.extend({
     })
     .then(function(tags) {
       return that.prompt([
-      //     {
-      //   type : 'list',
-      //   name : 'drupal_version',
-      //   choices : tags,
-      //   message : 'Select a version of Drupal',
-      //   default : config.drupal_version,
-      // },
-      // {
-      //   type: 'confirm',
-      //   name: 'features',
-      //   message: 'Does it use the Features module?',
-      //   default: config.features,
-      // },
-      // {
-      //   type: 'input',
-      //   name: 'drupal_theme',
-      //   message: 'Theme name (machine name)',
-      //   default: config.drupal_theme,
-      // },
+          {
+        type : 'list',
+        name : 'drupal_version',
+        choices : tags,
+        message : 'Select a version of Drupal',
+        default : config.drupal_version,
+      },
+      {
+        type: 'confirm',
+        name: 'features',
+        message: 'Does it use the Features module?',
+        default: config.features,
+      },
+      {
+        type: 'input',
+        name: 'drupal_theme',
+        message: 'Theme name (machine name)',
+        default: config.drupal_theme,
+      },
       {
         type: 'confirm',
         name: 'install_drupal',
